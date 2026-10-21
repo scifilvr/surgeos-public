@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — SurgeOS Gmail</title>
+  <meta name="description" content="How SurgeOS Gmail accesses, uses, stores, and shares Google user data.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="brand"><a href="index.html">SurgeOS Gmail</a></p>
+      <h1>Privacy Policy</h1>
+      <p class="lede">Effective October 20, 2026</p>
+    </header>
+
+    <p>
+      SurgeOS Gmail (&ldquo;the application&rdquo;) is a privately operated newsletter-processing and
+      research-digest application. It is not a public service. It is used only with a Gmail account that
+      its operator controls and has explicitly authorized. This policy explains what Google user data
+      the application accesses and how that data is used, stored, shared, and retained.
+    </p>
+
+    <h2>1. Google permissions requested</h2>
+    <p>The application requests exactly two Gmail permissions (OAuth scopes):</p>
+    <ul>
+      <li>
+        <strong>Read-only Gmail access</strong> (<code>https://www.googleapis.com/auth/gmail.readonly</code>).
+        Used to search the authorized account for messages from a small, fixed set of newsletter senders
+        and to read those messages. This permission cannot modify, label, move, or delete email, and the
+        application does none of these things.
+      </li>
+      <li>
+        <strong>Send email</strong> (<code>https://www.googleapis.com/auth/gmail.send</code>).
+        Used only to send the application's research digest emails from the authorized account.
+      </li>
+    </ul>
+
+    <h2>2. What data is accessed</h2>
+    <ul>
+      <li>
+        <strong>Newsletter messages.</strong> The application runs Gmail searches that match specific
+        newsletter senders and reads a limited number of the most recent matching messages on each run.
+        From each matching message it uses the subject line, date, and body text.
+      </li>
+      <li>
+        <strong>Message identifiers.</strong> It records each processed message's Gmail ID, along with its
+        subject, date, and newsletter source, so the same message is not processed twice.
+      </li>
+      <li>
+        <strong>Its own sent digests.</strong> To avoid sending duplicate digests, it may look up the Gmail
+        ID of a digest it previously sent to confirm that the send succeeded.
+      </li>
+    </ul>
+    <p>Apart from the items above, the application does not access other messages in the account.</p>
+
+    <h2>3. How the data is used</h2>
+    <p>
+      Newsletter content is used only to generate private research summaries for the operator. The
+      application extracts mentions of companies and related developments from newsletter text,
+      evaluates their relevance to the operator's research, and compiles the results into a digest.
+      The digest is sent by email from the authorized account to a recipient configured by the
+      operator (by default, the authorized account itself).
+    </p>
+    <p>Google user data is not used for any other purpose.</p>
+
+    <h2>4. Service providers that process the data</h2>
+    <p>
+      To identify companies and summarize developments, the application sends newsletter text, and
+      information derived from it, to <strong>Anthropic's Claude API</strong> for automated processing.
+      How Anthropic handles data it receives through its API, including whether and for how long it
+      is retained, is governed by Anthropic's own terms and policies. The operator does not control it.
+    </p>
+    <p>
+      Apart from Google (which provides Gmail), Anthropic, and the digest recipient configured by the
+      operator, the application does not transfer Google user data to any other party.
+    </p>
+
+    <h2>5. How the data is stored</h2>
+    <ul>
+      <li>
+        Newsletter text, the record of processed message IDs, extracted research information, and
+        generated digests are stored as files on the operator's own computer. The application does not
+        use a separate cloud database or storage service for this data.
+      </li>
+      <li>
+        The Google OAuth authorization token is stored in a local file on the same computer and is used
+        only to access the authorized account as described above.
+      </li>
+    </ul>
+
+    <h2>6. Data retention and deletion</h2>
+    <p>
+      The application does not automatically delete stored data. Newsletter text, message records,
+      extracted research information, and digests remain on the operator's computer until the operator
+      deletes them. Digest emails remain in the Gmail accounts that sent and received them, subject to
+      the normal settings of those accounts. Any retention of data sent to Anthropic is governed by
+      Anthropic's policies (see section 4).
+    </p>
+    <p>
+      Access can be revoked at any time by removing SurgeOS Gmail from the
+      <a href="https://myaccount.google.com/permissions">third-party access settings of the Google
+      Account</a>. After revocation, the application can no longer read or send email from that account.
+      Revoking access does not by itself delete files already stored on the operator's computer;
+      deletion requests can be sent to the contact address below.
+    </p>
+
+    <h2>7. No sale or advertising</h2>
+    <ul>
+      <li>Google user data is not sold.</li>
+      <li>Google user data is not used for advertising, including targeted, personalized, or
+        interest-based advertising.</li>
+      <li>Google user data is not used to determine creditworthiness or for lending purposes.</li>
+      <li>The operator does not use Google user data to develop, improve, or train generalized
+        artificial intelligence or machine-learning models.</li>
+      <li>The operator does not make Google user data available for other people to read. Data sent
+        to Anthropic for automated processing is subject to Anthropic's own policies (see section 4).</li>
+    </ul>
+
+    <h2>8. Google API Services User Data Policy</h2>
+    <p>
+      SurgeOS Gmail's use and transfer of information received from Google APIs to any other app will
+      adhere to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services
+      User Data Policy</a>, including the Limited Use requirements. Gmail data is used only to provide
+      the newsletter-processing and research-digest features described in this policy, and it is
+      shared only as described in section 4.
+    </p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>
+      If the application's handling of Google user data changes, this policy will be updated and the
+      effective date above will change.
+    </p>
+
+    <h2>10. Contact</h2>
+    <p>
+      Questions or requests about this policy:
+      <a href="mailto:surgeos.inbox@gmail.com">surgeos.inbox@gmail.com</a>
+    </p>
+
+    <footer>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </footer>
+  </main>
+</body>
+</html>
